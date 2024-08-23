@@ -1,0 +1,26 @@
+/* CONTAINER DO MENU */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: #334169;
+    padding: 1em;
+}
+
+/* REGRA DA LISTA DE LIVROS */
+.list{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* REGRAS DE LINKS */
+.item{
+    margin-right: 1em;
+    color: #fff;
+}
+
+/*REGRA DE TAMANHO DA IMAGEM DE LOGO*/
+.logo{
+    width: 120PX;
+}
