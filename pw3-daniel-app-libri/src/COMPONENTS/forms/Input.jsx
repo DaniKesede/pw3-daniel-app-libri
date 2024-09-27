@@ -1,6 +1,6 @@
 import styles from './Input.module.css' 
 
-function Input({type, text, name, placeHolder}) {
+function Input({type, text, name, placeHolder, handlerChangeBook}) {
     return(
 
       <div className={styles.form_control}>
@@ -9,7 +9,8 @@ function Input({type, text, name, placeHolder}) {
             type={type}
             name={name}
             id={name}
-            placeholder={placeHolder}/>
+            placeholder={placeHolder}
+            onChange={handlerChangeBook}/>
       </div>
 
     );
