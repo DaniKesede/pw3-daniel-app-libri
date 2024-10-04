@@ -51,7 +51,7 @@ function handlerChangeBook(event) {
     /* INSERÇÃO DOS DADOS DE LIVRO */
     function createBook(book) {
         
-        // console.log(JSON.stringify(book))
+        console.log(JSON.stringify(book))
 
         fetch('http://localhost:5000/inserirLivro', {
                 method:'POST',
@@ -74,7 +74,7 @@ function handlerChangeBook(event) {
         )
         .catch(
                 (err)=>{ console.log(err) }
-        )
+        ) 
 }
 
     /* FUNÇÃO DE SUBMIT */
@@ -88,7 +88,7 @@ function handlerChangeBook(event) {
         <section className={style.create_book_container}>
             <h1>CADASTRO DE LIVROS</h1>
 
-            <form submit={form}>
+            <form onSubmit={submit}>
                 
                 <Input 
                     type='text'
