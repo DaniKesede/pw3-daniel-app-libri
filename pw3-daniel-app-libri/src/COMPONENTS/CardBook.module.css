@@ -1,9 +1,10 @@
-.bookCard{
+.CardBooks{
     display: flex;
     flex-direction: column;
     align-items: center;
     width: max-content;
     border-radius: 5px;
+    margin: 5px;
     background-color: #dedede;
     border: 1px solid #ccc;
     font-family: Helvetica;
