@@ -1,11 +1,15 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import style from './CreateBooks.module.css';
 import Input from "../forms/Input";
 import Select from "../forms/Select";
 import Button from "../forms/Button";
 
+
 const CreateBooks = () => {
+
+    const navigate = useNavigate()
 
     //DEFINE O STATE DE DADOS DAS CATEGORIAS
 
@@ -14,7 +18,7 @@ const CreateBooks = () => {
 
     const [book, setBook] = useState([])
     /* HANDLER DE CAPTURA DOS DADOS DE INPUT (NOME DO LIVRO, AUTOR E DESCRIÇÃO) */
-function handlerChangeBook(event) {
+    function handlerChangeBook(event) {
     setBook({...book, [event.target.name] : event.target.value});
     console.log(book)
 }
@@ -75,13 +79,13 @@ function handlerChangeBook(event) {
         .then(
                 (data)=>{
                 console.log(data);
-                // navigate('/livros',{state:'LIVRO CADASTRADO COM SUCESSO!'});
+                navigate('/listBook',{state:'LIVRO CADASTRADO COM SUCESSO!'});
                 }
         )
         .catch(
                 (err)=>{ console.log(err) }
         ) 
-}
+    }
 
     /* FUNÇÃO DE SUBMIT */
     function submit(event) {
